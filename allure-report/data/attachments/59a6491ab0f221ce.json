@@ -1,5 +1,0 @@
-{
-  "error": "no such element",
-  "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//button[@id=\"truste-consent-button\"]\"}\n  (Session info: chrome=99.0.4844.74)",
-  "stacktrace": "#0 0x555572ba97d3 <unknown>\n#1 0x555572905688 <unknown>\n#2 0x55557293bc21 <unknown>\n#3 0x55557293bde1 <unknown>\n#4 0x55557296ed74 <unknown>\n#5 0x5555729596dd <unknown>\n#6 0x55557296ca0c <unknown>\n#7 0x5555729595a3 <unknown>\n#8 0x55557292eddc <unknown>\n#9 0x55557292fde5 <unknown>\n#10 0x555572bda49d <unknown>\n#11 0x555572bf360c <unknown>\n#12 0x555572bdc205 <unknown>\n#13 0x555572bf3ee5 <unknown>\n#14 0x555572bd0070 <unknown>\n#15 0x555572c0f488 <unknown>\n#16 0x555572c0f60c <unknown>\n#17 0x555572c28c6d <unknown>\n#18 0x7f1c86f12609 <unknown>\n"
-}
