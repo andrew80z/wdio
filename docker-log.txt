@@ -1,0 +1,53 @@
+2022-03-25 18:42:15,851 INFO Included extra file "/etc/supervisor/conf.d/selenium.conf" during parsing
+2022-03-25 18:42:15,853 INFO supervisord started with pid 8
+2022-03-25 18:42:16,854 INFO spawned: 'xvfb' with pid 10
+2022-03-25 18:42:16,856 INFO spawned: 'vnc' with pid 11
+2022-03-25 18:42:16,859 INFO spawned: 'novnc' with pid 12
+2022-03-25 18:42:16,861 INFO spawned: 'selenium-standalone' with pid 13
+Setting up SE_NODE_GRID_URL...
+2022-03-25 18:42:16,871 INFO success: xvfb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2022-03-25 18:42:16,871 INFO success: vnc entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2022-03-25 18:42:16,871 INFO success: novnc entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2022-03-25 18:42:16,871 INFO success: selenium-standalone entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+Selenium Grid Standalone configuration: 
+[network]
+relax-checks = true
+
+[node]
+session-timeout = "300"
+override-max-sessions = false
+detect-drivers = false
+max-sessions = 1
+
+[[node.driver-configuration]]
+display-name = "chrome"
+stereotype = '{"browserName": "chrome", "browserVersion": "99.0", "platformName": "Linux"}'
+max-sessions = 1
+
+Starting Selenium Grid Standalone...
+18:42:17.247 INFO [LoggingOptions.configureLogEncoding] - Using the system default encoding
+18:42:17.250 INFO [OpenTelemetryTracer.createTracer] - Using OpenTelemetry for tracing
+18:42:17.747 INFO [NodeOptions.getSessionFactories] - Detected 12 available processors
+18:42:17.785 INFO [NodeOptions.report] - Adding chrome for {"browserVersion": "99.0","browserName": "chrome","platformName": "Linux","se:vncEnabled": true} 1 times
+18:42:17.799 INFO [Node.<init>] - Binding additional locator mechanisms: id, name, relative
+18:42:17.828 INFO [LocalDistributor.add] - Added node 5f6d391d-42b2-484f-aa18-10123a5dc791 at http://172.17.0.2:4444. Health check every 120s
+18:42:17.840 INFO [GridModel.setAvailability] - Switching node 5f6d391d-42b2-484f-aa18-10123a5dc791 (uri: http://172.17.0.2:4444) from DOWN to UP
+18:42:17.956 INFO [Standalone.execute] - Started Selenium Standalone 4.1.2 (revision 9a5a329c5a): http://172.17.0.2:4444
+18:42:19.322 INFO [LocalDistributor.newSession] - Session request received by the distributor: 
+ [Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [--no-sandbox, --disable-infobars, --disable-gpu, --window-size=1440,735]}}]
+Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 50437
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+[1648233739.349][SEVERE]: bind() failed: Cannot assign requested address (99)
+18:42:19.963 INFO [ProtocolHandshake.createSession] - Detected dialect: W3C
+18:42:19.985 INFO [LocalDistributor.newSession] - Session created by the distributor. Id: 5e47da0b12b95267e99ca1326e5af616, Caps: Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 99.0.4844.74, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: /tmp/.com.google.Chrome.jKI585}, goog:chromeOptions: {debuggerAddress: localhost:34831}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://172.17.0.2:4444/sessio..., se:cdpVersion: 99.0.4844.74, se:vnc: ws://172.17.0.2:4444/sessio..., se:vncEnabled: true, se:vncLocalAddress: ws://172.17.0.2:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+18:42:29.922 INFO [LocalSessionMap.lambda$new$0] - Deleted session from local session map, Id: 5e47da0b12b95267e99ca1326e5af616
+Trapped SIGTERM/SIGINT/x so shutting down supervisord...
+2022-03-25 18:42:37,934 WARN received SIGTERM indicating exit request
+2022-03-25 18:42:37,934 INFO waiting for xvfb, vnc, novnc, selenium-standalone to die
+2022-03-25 18:42:38,260 INFO stopped: selenium-standalone (terminated by SIGTERM)
+2022-03-25 18:42:39,262 INFO stopped: novnc (terminated by SIGTERM)
+2022-03-25 18:42:40,264 INFO stopped: vnc (terminated by SIGTERM)
+2022-03-25 18:42:41,266 INFO stopped: xvfb (terminated by SIGTERM)
+Shutdown complete
